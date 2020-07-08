@@ -61,29 +61,29 @@ app.post('/order', (req, res)=>{
 	})
 })
 
-client.on('message', message=>{
-	if(message.content == '$order'){
-		fs.readFile('views/order.txt', 'utf-8', (err, result)=>{
-			if(err){
-				throw err;
-			}else{
-				message.channel.send(result);
-			}
-		})
-	}
+// client.on('message', message=>{
+// 	if(message.content == '$order'){
+// 		fs.readFile('views/order.txt', 'utf-8', (err, result)=>{
+// 			if(err){
+// 				throw err;
+// 			}else{
+// 				message.channel.send(result);
+// 			}
+// 		})
+// 	}
 
-	if(message.content == '$vip'){
-		fs.readFile('views/data.txt', 'utf-8', (err, result)=>{
-			if(err){
-				throw err;
-			}else{
-				message.channel.send(result);
-			}
-		})
-	}
-})
+// 	if(message.content == '$vip'){
+// 		fs.readFile('views/data.txt', 'utf-8', (err, result)=>{
+// 			if(err){
+// 				throw err;
+// 			}else{
+// 				message.channel.send(result);
+// 			}
+// 		})
+// 	}
+// })
 
-client.login('NjkzMzM1NzcxOTIyNDMyMDMw.XwVzug.6ZfctcG3vXNadRe__IDrnTf9xII');
+// client.login('NjkzMzM1NzcxOTIyNDMyMDMw.XwVzug.6ZfctcG3vXNadRe__IDrnTf9xII');
 
 let PORT = process.env.PORT | 5600;
 
